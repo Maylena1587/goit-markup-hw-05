@@ -62,9 +62,15 @@ body {
   background-color: var(--primary-white-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
+  padding: 80px;
 }
 
 .page-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-white-color);
   border-bottom: 1px solid #ececec;
 }
 /* main-nav */
@@ -313,15 +319,16 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-.title.one {
+.activity {
+  position: relative;
+}
+.working {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding: 27px 0px 27px 0px;
 }
-.title.two {
-  padding: 27px 0px 27px 0px;
-}
-.title.three {
-  padding: 27px 0px 27px 0px;
-}
+
 /* Exampls */
 
 .customers-title {
@@ -562,10 +569,48 @@ body {
   font-size: 16px;
   line-height: 1.8;
 }
-/* information temporarily hidden */
-.information {
-  display: none;
+.overlay-hover::before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(33, 150, 243, 0.9);
 }
+.overlay-hover:hover::before {
+  opacity: 1;
+}
+.overlay-hover {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio:hover .text-hover,
+.portfolio:focus .text-hover {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.text-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 63px 24px;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+}
+
+/* information temporarily hidden */
+
 /* Button */
 
 .button {
