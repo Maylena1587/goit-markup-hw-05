@@ -119,6 +119,8 @@ body {
   padding: 0;
   list-style: none;
   margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 
   font-weight: 500;
   font-size: 14px;
@@ -310,7 +312,7 @@ body {
   border-radius: 4px;
 }
 .information {
-  padding-top: 30 px;
+  padding-top: 30px;
 }
 
 .work-list,
