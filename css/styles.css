@@ -38,16 +38,16 @@
 }
 .img-list {
   display: block;
-  width: 370px;
+  width: 100%;
   height: auto;
 }
 .img-team {
   display: block;
-  width: 270px;
+  width: 100%;
   height: auto;
 }
 .element {
-  width: 370px;
+  width: 270px;
 }
 .element + .element {
   margin-left: 30px;
@@ -245,6 +245,7 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  text-transform: uppercase;
 }
 /* section */
 
@@ -312,7 +313,6 @@ body {
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -341,6 +341,7 @@ body {
 }
 .activity {
   position: relative;
+  width: 370px;
 }
 .working {
   position: absolute;
@@ -605,10 +606,14 @@ body {
   opacity: 0;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transition: opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .overlay-hover:hover::before {
   opacity: 1;
+  transform: translateY(0);
 }
 .overlay-hover {
   position: relative;
@@ -622,6 +627,7 @@ body {
 .portfolio:hover .overlay-hover::before,
 .portfolio:focus .overlay-hover::before {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .text-hover {
@@ -641,8 +647,8 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
 
-  transition: transform 2500ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 /* transition: all 2s linear; * /
 /* information temporarily hidden */
